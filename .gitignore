@@ -103,6 +103,7 @@ celerybeat.pid
 
 # Environments
 .env
+src/autogpt_plugins/gpt4/.env.plugin
 .venv
 env/
 venv/

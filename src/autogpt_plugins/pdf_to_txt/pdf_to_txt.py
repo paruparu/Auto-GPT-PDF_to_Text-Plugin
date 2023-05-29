@@ -58,7 +58,7 @@ def pdf2txt(pdf_file_name: str, txt_file_name: str) -> str:
         os.makedirs(cwd + '/'+file_name_without_extension)
     for i, chunk in enumerate(chunks_text):
         # Construct the filename for each chunk
-        filename = os.path.join(cwd + '/'+file_name_without_extension, f'{i}{txt_file_name}') #directory and file name to save the text data
+        filename = os.path.join(cwd + '/'+file_name_without_extension, f'{file_name_without_extension}_chunk_{i}.txt') #directory and file name to save the text data
         with open(filename, 'w', encoding='utf-8') as file:
             encoding = tiktoken.get_encoding("cl100k_base")
             decoded_text = encoding.decode(chunk)
